@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Update Profile{% endblock %}
+
+{% block content %}
+
+<section id="update-profile">
+    <h1>Update Your Profile</h1>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save Changes</button>
+    </form>
+    <br>
+    <a href="{% url 'home' %}">Back to Home</a>
+</section>
+
+{% endblock %}

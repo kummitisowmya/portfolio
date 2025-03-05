@@ -1,0 +1,430 @@
+/* General Styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+    background-color: #ecf0f1; /* Single background color for the entire page */
+}
+
+/* Navigation Bar */
+/* Navigation Bar */
+nav {
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box; /* Ensures padding doesn't overflow */
+}
+
+/* Logo Styling */
+nav .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    white-space: nowrap; /* Prevents logo from breaking */
+}
+
+/* Navigation Links */
+nav .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px; /* Reduce gap slightly */
+    padding: 0;
+    margin: 0;
+}
+
+/* Ensuring Navigation Items Stay Inline */
+nav .nav-links li {
+    display: inline-block;
+}
+
+/* Navigation Link Styling */
+nav .nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px; /* Better padding */
+    transition: background 0.3s;
+    display: block; /* Ensures clickable area is proper */
+}
+
+/* Hover & Active Effect */
+nav .nav-links a.active,
+nav .nav-links a:hover {
+    background-color: #1abc9c;
+    border-radius: 5px;
+}
+
+/* Fix for Overflow Issue */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav .nav-links {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+}
+
+/* Sections */
+section {
+    text-align: center;
+    background-color: #ecf0f1; /* Single background color for all sections */
+}
+
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px; /* Extra padding to account for the fixed navbar */
+}
+#home p{
+   font-size:1.5em;
+   }
+/* Home Section Styling */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+/* Home Section Styling */
+.text-content {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    text-align: center; /* Center text within elements */
+}
+
+.text-content h1 {
+    font-size: 5em; /* Big font for "Hi, I'm Sowmya" */
+    margin-bottom: 10px;
+    color: #2c3e50; /* Dark text color */
+}
+
+.text-content h2 {
+    font-size: 4em; /* Big font for "Python Developer" */
+    margin-bottom: 40px;
+    color: #1abc9c; /* Highlight color */
+}
+
+.text-content .buttons {
+    display: flex;
+    gap: 20px; /* Space between buttons */
+    margin-top: 20px;
+    padding-bottom: 150px;
+}
+
+.text-content .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1abc9c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-size: 1.1em;
+
+}
+
+.text-content .btn:hover {
+    background-color: #16a085;
+}
+
+/* Home Section Styling */
+.image-content {
+    flex: 1;
+    max-width: 40%; /* Adjust width for the profile image */
+    display: flex;
+    justify-content: flex-start; /* Align image to the left */
+    align-items: center; /* Center the image vertically */
+}
+
+.profile-img {
+    width: 500px; /* Set a fixed width for the circular image */
+    height: 500px; /* Set a fixed height to match the width */
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover; /* Ensure the image fills the circle without distortion */
+    border: 4px solid #1abc9c; /* Optional: Add a border */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow */
+    object-position: center top; /* Ensure the head is centered and not cut off */
+}
+/* About Section Styling */
+#about {
+    background-color: #ffffff; /* White background for contrast */
+    padding: 100px 20px;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-container h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #2c3e50; /* Dark text color */
+}
+
+.about-content {
+    text-align: left;
+    background-color: #f9f9f9; /* Light background for the content */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.about-content p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #34495e; /* Slightly darker text for better readability */
+}
+
+.about-content strong {
+    color: #1abc9c; /* Highlight color for key phrases */
+}
+/* Skills Section Styling */
+#skills {
+    background-color: #ffffff; /* White background for contrast */
+    padding: 100px 20px;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 100px; /* Space between image and skills */
+}
+
+.skills-image {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.computer-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Rounded corners for the image */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.skills-content {
+    flex: 1;
+    max-width: 50%;
+}
+
+.skills-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #2c3e50; /* Dark text color */
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skills-list li {
+    background-color: #1abc9c; /* Green background for skills */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skills-list li:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+/* Projects Section Styling */
+#projects {
+    text-align: center;
+    background-color: #ecf0f1; /* Matches all sections */
+}
+
+#projects h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* Projects Grid */
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px; /* Increased spacing */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Project Cards */
+.project-card {
+    background-color: #2c3e50;
+    padding: 20px;
+    border-radius: 15px;
+    width: 320px; /* Increased width for better layout */
+    text-align: center;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+#about {
+    background-color: #ecf0f1; /* Updated to match other sections */
+    padding: 100px 20px;
+}
+
+/* Skills Section Styling */
+#skills {
+    background-color: #ecf0f1; /* Updated to match other sections */
+    padding: 100px 20px;
+}
+/* Project Links */
+.project-card a {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #1abc9c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-size: 1.1em;
+}
+
+.project-card a:hover {
+    background-color: #16a085;
+}
+
+/* Contact Section */
+#contact p {
+    color: #2c3e50;
+    font-size: 1.2em;
+}
+
+#contact a {
+    color: #1abc9c;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+#contact a:hover {
+    color: #16a085;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-content, .image-content {
+        max-width: 100%;
+    }
+
+    .skills-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project-container {
+        flex-direction: column;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+}
+/* Contact Section Styling */
+#contact p {
+    color: #2c3e50; /* Darker text color for better contrast */
+    font-size: 1.2em;
+}
+#contact h1{
+    font-size:2.5em;
+    }
+#contact a {
+    color: #1abc9c;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+#contact a:hover {
+    color: #16a085;
+}
+/* Footer Styling */
+footer {
+    background-color: #2c3e50; /* Same as navbar */
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 50px; /* Ensures spacing from last section */
+}
+
+.footer-nav {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-links li {
+    display: inline-block;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    transition: background 0.3s;
+    border-radius: 5px;
+}
+
+.footer-links a:hover {
+    background-color: #1abc9c;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
